@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import logo from "../assets/images/logo.svg";
 
-import { LogoutOutlined } from  '@ant-design/icons';
+import { LogoutOutlined } from "@ant-design/icons";
 
 function TopBar(props) {
     const { isLoggedIn, handleLogout } = props;
@@ -9,12 +9,9 @@ function TopBar(props) {
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <span className="App-title">Around Web</span>
-            {
-                isLoggedIn ?
-                    <LogoutOutlined className='logout' onClick={handleLogout}/>
-                    :
-                    null
-            }
+            {isLoggedIn ? (
+                <LogoutOutlined className="logout" onClick={handleLogout} />
+            ) : null}
         </header>
     );
 }
